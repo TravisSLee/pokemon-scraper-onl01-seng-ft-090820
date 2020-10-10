@@ -24,7 +24,7 @@ class Pokemon
       SELECT * FROM pokemon WHERE id = (?);
     SQL
     pokemon = db.execute(sql, id).flatten
-    Pokemon.new(id: id, pokemon[1], pokemon[2], db )
+    Pokemon.new(id: id,name: pokemon[1],type: pokemon[2], db: db )
   end
 
 end
